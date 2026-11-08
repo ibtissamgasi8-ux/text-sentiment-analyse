@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Customer Support Chatbot – Arabic, Darija &amp; French | Ibtissam Gasi</title>
+<meta name="description" content="Educational rule-based customer support chatbot that detects language and intent in Arabic, Moroccan Darija and French. Runs in the browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <div class="brand"><span class="logo">A</span><div><b>Atlas Support</b><small>Fictional demo store · Atlas Shop</small></div></div>
+  <span class="pill">Educational prototype</span>
+</div></header>
+
+<main class="wrap">
+  <div class="notice"><b>Educational prototype.</b> This assistant is rule-based (keywords and templates). It does not use a trained AI model, an external API or any server. Nothing you type leaves your browser.</div>
+
+  <div class="layout">
+    <section class="chat card" aria-label="Chat">
+      <div class="chat-head">
+        <div class="avatar">A</div>
+        <div class="who"><b>Atlas Support Assistant</b><span><i class="dot"></i>Online · rule-based demo</span></div>
+        <button id="clear" class="btn small">Clear conversation</button>
+      </div>
+      <div id="messages" class="messages" role="log" aria-live="polite"></div>
+      <div id="error" class="error" role="alert"></div>
+      <form id="form" class="composer" autocomplete="off">
+        <input id="input" type="text" maxlength="500" dir="auto" aria-label="Type your message"
+          placeholder="اكتب رسالتك · كتب الرسالة ديالك · Écrivez votre message…">
+        <button id="send" class="send" type="submit" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+        </button>
+      </form>
+    </section>
+
+    <aside class="side">
+      <div class="card"><h2>Quick questions</h2><div id="quick" class="quick"></div></div>
+      <div class="card"><h2>Live detection</h2>
+        <dl class="det"><dt>Language</dt><dd id="detLang">–</dd><dt>Intent</dt><dd id="detIntent">–</dd><dt>Matched keywords</dt><dd id="detKw">–</dd></dl>
+      </div>
+      <div class="card"><h2>Supported intents</h2><ul id="legend" class="legend"></ul></div>
+    </aside>
+  </div>
+</main>
+<footer>© <span id="yr"></span> Ibtissam Gasi · Portfolio project 03 · Atlas Shop is a fictional store</footer>
+<script src="script.js"></script>
+</body>
+</html>
